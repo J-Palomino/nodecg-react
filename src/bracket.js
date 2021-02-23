@@ -37,12 +37,22 @@ class App extends React.Component {
           {
             id: 2,
             // date: new Date().toDateString(),
-            teams: [{ name: "" }, { name: "Team D" }],
+            teams: [{ name: "Racer 2" }, { name: "Team D" }],
+          },
+          {
+            id: 3,
+            // date: new Date().toDateString(),
+            teams: [{ name: this.state.replicants.name }, { name: "Team B" }],
+          },
+          {
+            id: 4,
+            // date: new Date().toDateString(),
+            teams: [{ name: "Racer 4" }, { name: "Team D" }],
           },
         ],
       },
       {
-        title: "Round one",
+        title: "Round Two",
         seeds: [
           {
             id: 3,
@@ -56,8 +66,6 @@ class App extends React.Component {
     return (
       <div>
         <div className="container">
-          <h1>Hello, {this.state.replicants.name}!</h1>
-          <p>The last time someone pressed the button was {lastStamp}</p>
           <Bracket rounds={rounds} />
         </div>
       </div>
@@ -65,5 +73,5 @@ class App extends React.Component {
   }
 }
 
-const root = document.getElementById("app");
+const root = document.getElementById("bracket");
 ReactDOM.render(<App />, root);
